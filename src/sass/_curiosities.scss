@@ -1,0 +1,21 @@
+.curiosities{
+    min-height: 90vh;
+    width: 90%;
+    margin: auto;
+
+    .curiosities_container{
+        @include flex(center, center, row);
+
+        .curiosity-text, .curiosity-img{
+        flex: 1 1 20rem;
+        }
+
+        .curiosity-text{
+            @include flex(center, center, column)
+        }
+    }
+
+    .fact-btn{
+        text-align: center;
+    }
+}

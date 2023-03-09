@@ -100,7 +100,7 @@ goToSlide(curSlide);
 slider();
 
 // Getting images from API
-// link: https://random.dog/woof.json
+const imageLink1= 'https://random.dog/woof.json';
 
 const timeout = function (s) {
     return new Promise(function (_, reject) {
@@ -126,13 +126,69 @@ try{
 const images = document.querySelectorAll('.slide-img');
 
 const getImage1 = async function(i){
-    let image = await AJAX('https://random.dog/woof.json');
+    let image = await AJAX(imageLink1);
     if(image.slice(-3) === 'mp4') {
-        image = await AJAX('https://random.dog/woof.json');
+        image = await AJAX(imageLink1);
         i.src = image;} else{
             i.src = image;
         }
 };
 
 images.forEach((img) => getImage1(img));
-console.log(images);
+// console.log(images);
+
+// Getting facts from API
+
+const factLink1 = 'https://dog-api.kinduff.com/api/facts';
+// Link: 'https://dog-api.kinduff.com/api/facts?raw=true';
+
+const imageLink2 = 'https://dog.ceo/api/breeds/image/random';
+
+const AJAX2 = async function(url){
+    try{
+        const fetchData = await fetch(url);
+        const res = await Promise.race([fetchData, timeout(5000)]);
+        const data = await res.json();
+    
+        if(!res.ok) throw new Error(`${res.status}`)
+        return data.facts[0];
+    }catch(err){
+        throw err;
+    }
+    }
+
+const factText = document.querySelector('.fact-text');
+const factBtn = document.querySelector('.fact-btn');
+const factImg = document.querySelector('.curiosity-img');
+
+const getFact = async function(){
+    const fact = await AJAX2(factLink1);
+    factText.textContent = fact;
+};
+
+// Get image 2
+
+const AJAX3 = async function(url){
+    try{
+        const fetchData = await fetch(url);
+        const res = await Promise.race([fetchData, timeout(5000)]);
+        const data = await res.json();
+    
+        if(!res.ok) throw new Error(`${res.status}`)
+
+        return data.message;
+    }catch(err){
+        throw err;
+    }
+    }
+
+const getImage2 = async function(){
+    const image = await AJAX3(imageLink2);
+    factImg.src = image;
+    };
+
+getImage2();
+getFact();
+
+factBtn.addEventListener('click', ()=>{getImage2();getFact();});
+
