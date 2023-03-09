@@ -1,3 +1,54 @@
+// PRUEBA
+/*
+// Spinner
+
+const clear = function(el){
+    el.innerHTML = '';
+    }
+    
+    const renderSpinner = function(el) {
+        const markup = `
+          <div class="spinner">
+            <svg>
+              <use href="./src/icons/spinner.svg"></use>
+            </svg>
+          </div>
+        `;
+        clear(el);
+        el.insertAdjacentHTML('afterbegin', markup);
+      }
+
+const createSlide = async function(){
+    let image = await AJAX('https://random.dog/woof.json');
+    if(image.slice(-3) === 'mp4') {
+        image = await AJAX('https://random.dog/woof.json');
+        insertSlideElement(slider, image);} else{
+            insertSlideElement(slider, image);
+        }
+};
+createSlide();
+*/
+
+// Creating slides
+
+const slidesContainer = document.querySelector('.slider');
+const slidesQuantity = 4;
+
+const insertSlideElement = function(el){
+    el.insertAdjacentHTML('afterbegin', `
+    <div class="slide">
+            <img class="slide-img" src="" alt="image" />
+          </div>
+    `)
+};
+
+const createSlides = function(max){
+    for(i=0;i<max;i++){
+        insertSlideElement(slidesContainer);
+    }
+}
+createSlides(slidesQuantity);
+
 // Slider
 
 const slider = function(){
