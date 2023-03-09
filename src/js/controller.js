@@ -48,3 +48,40 @@ goToSlide(curSlide);
 }
 slider();
 
+// Getting images from API
+// link: https://random.dog/woof.json
+
+const timeout = function (s) {
+    return new Promise(function (_, reject) {
+      setTimeout(function () {
+        reject(new Error(`Request took too long! Timeout after ${s} second`));
+      }, s * 1000);
+    });
+  };
+
+const AJAX = async function(url){
+try{
+    const fetchData = await fetch(url);
+    const res = await Promise.race([fetchData, timeout(5000)]);
+    const data = await res.json();
+
+    if(!res.ok) throw new Error(`${res.status}`)
+    return data.url;
+}catch(err){
+    throw err;
+}
+}
+
+const images = document.querySelectorAll('.slide-img');
+
+const getImage1 = async function(i){
+    let image = await AJAX('https://random.dog/woof.json');
+    if(image.slice(-3) === 'mp4') {
+        image = await AJAX('https://random.dog/woof.json');
+        i.src = image;} else{
+            i.src = image;
+        }
+};
+
+images.forEach((img) => getImage1(img));
+console.log(images);

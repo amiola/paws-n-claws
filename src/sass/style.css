@@ -230,11 +230,11 @@ a {
   align-items: center;
   flex-direction: column;
   transition: transform 1s;
-  /*
-         & > img{
-              width: 80%;
-              object-fit: cover;
-          }*/
+}
+.gallery .slide > img {
+  width: 50rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .gallery .slide-prev, .gallery .slide-next {
   cursor: pointer;

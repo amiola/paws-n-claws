@@ -21,11 +21,11 @@
         @include flex(center, center, column);
 
         transition: transform 1s;
-/*
+
        & > img{
-            width: 80%;
+            width: 50rem;
             object-fit: cover;
-        }*/
+        }
 
     }
 
