@@ -10,6 +10,14 @@
     />
     <meta name="robots" content="index,follow" />
     <link rel="icon" href="./src/icons/pnc.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/sass/style.css" />
     <script defer src="src/js/controller.js"></script>
     <title>Paws 'n' Claws</title>
@@ -166,24 +174,24 @@
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit,
           tenetur.
         </p>
-        <div class="gallery__carousel-container fade">
-          <div class="gallery__container gallery__container--1">
+        <div class="slider">
+          <div class="slide slide-1">
             <h3 class="img-title">Title1</h3>
             <img src="./src/img/image.PNG" alt="image" />
             <div class="info">First image</div>
           </div>
-          <div class="gallery__container gallery__container--2">
+          <div class="slide slide-2">
             <h3 class="img-title">Title2</h3>
             <img src="./src/img/image.PNG" alt="image" />
             <div class="info">Second image</div>
           </div>
-          <div class="gallery__container gallery__container--3">
+          <div class="slide slide-3">
             <h3 class="img-title">Title3</h3>
             <img src="./src/img/image.PNG" alt="image" />
             <div class="info">Third image</div>
           </div>
-          <button class="prev">&#10094;</button>
-          <button class="next">&#10095;</button>
+          <button class="slide-prev">&#10094;</button>
+          <button class="slide-next">&#10095;</button>
         </div>
       </section>
       <section class="curiosities" id="curiosities">
