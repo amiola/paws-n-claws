@@ -63,22 +63,39 @@
         </div>
       </section>
       <section class="care" id="care">
-        <h2>Actions</h2>
-        <p>
+        <h2 class="section-title">Actions</h2>
+        <p class="section-header">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sit
           necessitatibus temporibus eum reiciendis ducimus ipsa commodi
           inventore excepturi iusto.
         </p>
+        <div class="actions__tab-container">
+          <button
+            class="btn actions__tab actions__tab--1 actions__tab--active"
+            data-tab="1"
+          >
+            <span>01</span> Train
+          </button>
+          <button class="btn actions__tab actions__tab--2" data-tab="2">
+            <span>02</span> Play
+          </button>
+          <button class="btn actions__tab actions__tab--3" data-tab="3">
+            <span>03</span> Feed
+          </button>
+          <button class="btn actions__tab actions__tab--4" data-tab="4">
+            <span>04</span> Love
+          </button>
+        </div>
         <div class="actions">
-          <div class="action">
-            <h3>Training</h3>
+          <div class="action actions__content--1 actions__content--active">
+            <h3 class="actions-header">Training</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
               a!
             </p>
             <img src="./src/img/dog-walking.jpg" alt="dog-walking" />
           </div>
-          <div class="action">
+          <div class="action actions__content--2">
             <h3>Play</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
@@ -86,7 +103,7 @@
             </p>
             <img src="./src/img/dog-playing.jpg" alt="dog-playing" />
           </div>
-          <div class="action">
+          <div class="action actions__content--3">
             <h3>Feed</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
@@ -94,7 +111,7 @@
             </p>
             <img src="./src/img/dog-eating.jpg" alt="dog-eating" />
           </div>
-          <div class="action">
+          <div class="action actions__content--4">
             <h3>Love</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
@@ -144,30 +161,50 @@
         </div>
       </section>
       <section class="gallery" id="gallery">
-        <h2>Gallery</h2>
-        <p>
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-header">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit,
           tenetur.
         </p>
-        <div class="carousel-containers fade">
-          <div class="container">
-            <h3>Title1</h3>
+        <div class="gallery__carousel-container fade">
+          <div class="gallery__container gallery__container--1">
+            <h3 class="img-title">Title1</h3>
             <img src="./src/img/image.PNG" alt="image" />
             <div class="info">First image</div>
           </div>
-          <div class="container">
-            <h3>Title2</h3>
+          <div class="gallery__container gallery__container--2">
+            <h3 class="img-title">Title2</h3>
             <img src="./src/img/image.PNG" alt="image" />
             <div class="info">Second image</div>
           </div>
-          <div class="container">
-            <h3>Title3</h3>
+          <div class="gallery__container gallery__container--3">
+            <h3 class="img-title">Title3</h3>
             <img src="./src/img/image.PNG" alt="image" />
             <div class="info">Third image</div>
           </div>
           <button class="prev">&#10094;</button>
           <button class="next">&#10095;</button>
         </div>
+      </section>
+      <section class="curiosities" id="curiosities">
+        <h2 class="section-title">Curiosities</h2>
+        <p class="section-header">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit,
+          tenetur.
+        </p>
+        <div class="curiosities_container">
+          <div class="fact">
+            <h3>Title</h3>
+            <span>"</span>
+            <p>
+              Fact Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Iure, esse?
+            </p>
+            <span>"</span>
+          </div>
+          <img src="./src/img/image.PNG" alt="" />
+        </div>
+        <button>Learn a fact!</button>
       </section>
     </main>
   </body>

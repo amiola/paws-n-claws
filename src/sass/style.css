@@ -196,4 +196,44 @@ a {
 .articles .article .article-text p {
   padding: 1rem;
   font-size: 1.5rem;
+}
+
+.gallery {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  min-height: 90vh;
+}
+.gallery .gallery__container--2, .gallery .gallery__container--3 {
+  display: none;
+}
+.gallery .gallery__container {
+  text-align: center;
+}
+.gallery .gallery__container .info {
+  color: #e3e3e3;
+  padding: 2rem;
+  position: absolute;
+  bottom: 3rem;
+  text-align: center;
+}
+.gallery .prev, .gallery .next {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  color: grey;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: 0.4s ease;
+  border-radius: 1rem 0 0 1rem;
+}
+.gallery .prev:hover, .gallery .next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.gallery .next {
+  right: 0;
+  border-radius: 0 1rem 1rem 0;
 }/*# sourceMappingURL=style.css.map */
