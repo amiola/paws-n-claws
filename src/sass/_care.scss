@@ -1,0 +1,65 @@
+.care{
+    width: 90%;
+    margin: auto;
+    min-height: 90vh;
+    h2{
+        margin: 2rem 0;
+    }
+    p{
+        margin: 1rem 0;
+    }
+
+    .actions{
+        @include flex(center, center, row);
+        flex-wrap: wrap;
+
+        .action{
+            flex: 1 1 20rem;
+            text-align: center;
+            border: solid black 1px;
+            border-radius: 2rem;
+            margin: 1rem;
+            padding: 1rem;
+
+            p{
+                text-align: left;
+            }
+
+            img{
+                height: 15rem;
+            }
+        }
+    }
+}
+
+.articles{
+    @include flex(center, center, row);
+    flex-wrap: wrap;
+
+    .article{
+        flex: 1 1 20rem;
+        text-align: left;
+        // border: solid black 1px;
+        // border-radius: 2rem;
+        margin: 1rem;
+        padding: 1rem;
+
+        h4{
+            padding-left: 1rem;
+        }
+
+        .article-text{
+            padding: 1rem;
+            @include flex(center,center,row);
+            img{
+                height: 10rem;
+            }
+            p{
+                padding: 1rem;
+                font-size: 1.5rem;
+            }
+    
+        }
+        
+    }
+}
