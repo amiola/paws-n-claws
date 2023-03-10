@@ -163,18 +163,28 @@ button:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 
+.section-title, .section-header {
+  padding: 2rem;
+}
+
 .care {
-  width: 90%;
-  margin: auto;
+  width: 100%;
   min-height: 90vh;
-}
-.care h2 {
-  margin: 2rem 0;
-}
-.care p {
-  margin: 1rem 0;
+  background: linear-gradient(to top left, rgba(255, 255, 255, 0.4), transparent), url("/src/img/park1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .care .actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.care .actions .action-container {
+  height: 20vh;
+  flex: 1 1 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,18 +192,22 @@ button:hover {
   flex-wrap: wrap;
 }
 .care .actions .action {
-  flex: 1 1 20rem;
+  padding: 4rem 2rem;
+  flex: 2 1 30rem;
   text-align: center;
-  border: solid black 1px;
-  border-radius: 2rem;
-  margin: 1rem;
-  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
 }
 .care .actions .action p {
   text-align: left;
 }
-.care .actions .action img {
-  height: 15rem;
+.care .actions .action_img-container {
+  flex: 1 1 30rem;
+  text-align: center;
+}
+.care .actions .action_img-container .action_img {
+  height: 25rem;
+  text-align: center;
 }
 
 .articles {

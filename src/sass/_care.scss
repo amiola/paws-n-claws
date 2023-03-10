@@ -1,34 +1,44 @@
 .care{
-    width: 90%;
-    margin: auto;
+    width: 100%;
     min-height: 90vh;
-    h2{
-        margin: 2rem 0;
-    }
-    p{
-        margin: 1rem 0;
-    }
+    background: $gradient-white, url('/src/img/park1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     .actions{
-        @include flex(center, center, row);
+        @include flex(center, center, column);
         flex-wrap: wrap;
 
+        .action-container{
+            height: 20vh;
+            flex: 1 1 30rem;
+            @include flex(center, center, row);
+            flex-wrap: wrap;
+        }
         .action{
-            flex: 1 1 20rem;
+            padding: 4rem 2rem;
+            flex: 2 1 30rem;
             text-align: center;
-            border: solid black 1px;
-            border-radius: 2rem;
-            margin: 1rem;
-            padding: 1rem;
+            background: rgba($color: #000000, $alpha: 0.4);
+            // border: solid black 1px;
+            border-radius: 1rem;
 
             p{
                 text-align: left;
             }
-
-            img{
-                height: 15rem;
-            }
         }
+    
+    .action_img-container{
+        flex: 1 1 30rem;
+        text-align: center;
+
+        .action_img{
+            height: 25rem;
+            text-align: center;
+        }
+    }
+    
     }
 }
 
