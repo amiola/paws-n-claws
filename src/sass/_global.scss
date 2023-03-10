@@ -45,3 +45,18 @@ a {
   text-decoration: none;
   color: black;
 }
+
+button {
+  padding: 2rem 6rem;
+  background: #4c6e97;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+
+  
+  &:hover{
+    background: rgba(0,0,0,0.8);
+}
+}

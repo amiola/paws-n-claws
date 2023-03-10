@@ -29,7 +29,6 @@
     }
 
     .slide-prev, .slide-next{
-        cursor: pointer;
         position: absolute;
         top: 50%;
         width: auto;
@@ -41,10 +40,7 @@
         transition: 0.4s ease;
         border: none;
         border-radius: 1rem 0 0 1rem;
-
-        &:hover{
-            background: rgba(0,0,0,0.8);
-        }}
+}
 
     .slide-next{
         right: 0;
