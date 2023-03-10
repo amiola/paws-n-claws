@@ -1,7 +1,6 @@
 .curiosities{
     min-height: 90vh;
-    width: 90%;
-    margin: auto;
+    width: 100%;
 
     .curiosities_container{
         @include flex(center, center, row);

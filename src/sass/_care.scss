@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: center;
 
+
     .actions{
         @include flex(center, center, column);
         flex-wrap: wrap;
@@ -20,7 +21,7 @@
             padding: 4rem 2rem;
             flex: 2 1 30rem;
             text-align: center;
-            background: rgba($color: #000000, $alpha: 0.4);
+            background: $background-black;
             // border: solid black 1px;
             border-radius: 1rem;
 

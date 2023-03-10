@@ -6,6 +6,7 @@
   color: white;
   position: sticky;
   top: 0px;
+  z-index: 1;
   }
   nav {
     @include flex(space-between, center, row);

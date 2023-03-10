@@ -61,6 +61,14 @@ button {
 }
 }
 
-.section-title, .section-header{
+.section-title{
+  padding: 10rem 2rem 2rem 2rem;
+  background: $background-black;
+  color: white;
+  border: 1px solid black;
+}
+
+.section-header{
   padding: 2rem;
+  background: $background-black;
 }
